@@ -11,8 +11,8 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-commentary'
+Plugin 'endwise.vim'
+Plugin 'commentary.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,5 +79,6 @@ if executable("ag")
 endif
 
 syntax on
+" https://github.com/sonjapeterson/1989.vim
 colorscheme 1989
 set number
