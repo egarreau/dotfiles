@@ -7,12 +7,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'endwise.vim'
-Plugin 'commentary.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,7 +74,9 @@ if executable("ag")
   let g:ctrlp_use_caching = 0
 endif
 
-syntax on
-" https://github.com/sonjapeterson/1989.vim
+" https://github.com/egarreau/1989.vim
+" with thanks to Sonja Peterson for the original ✨
 colorscheme 1989
+
+syntax on
 set number

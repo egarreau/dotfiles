@@ -1,30 +1,3 @@
-# echo is like puts for bash (bash is the program running in your terminal)
-echo "Loading ~/.bash_profile a shell script that runs in every new terminal you open"
-
-# $VARIABLE will render before the rest of the command is executed
-echo "Logged in as $USER at $(hostname)"
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# Path for RVM
-test -d $HOME/.rvm/bin && PATH=$PATH:$HOME/.rvm/bin
-
-# Rbenv autocomplete and shims
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# Path for RBENV
-test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-
-# Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
-
-# Path order matters, putting /usr/local/bin: before $PATH
-# ensures brew programs will be seen and used before another program
-# of the same name is called
-
-# Path for brew
-test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-# Path for Heroku
-test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
-
 # Load git completions
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
@@ -70,13 +43,7 @@ alias ls='ls -Gh'
 # Force grep to always use the color option and show line numbers
 export GREP_OPTIONS='--color=always'
 
-# Set sublime as the default editor
-which -s subl && export EDITOR="subl --wait"
+alias la='ls -Fah'
 
-# Useful aliases
-
-alias e=subl
-alias be="bundle exec"
-
-
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+# set my default editor to vim
+export EDITOR="vim"
