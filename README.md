@@ -32,6 +32,12 @@ Install [Vundle](https://github.com/VundleVim/Vundle.Vim) to manage plugins
 ```
 $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
+
+Install [the silver searcher](https://github.com/ggreer/the_silver_searcher) to power the `ag` plugin
+```
+$ brew install the_silver_searcher
+```
+
 Launch vim and run `:PluginInstall` to install all plugins
 
 ## Tmux
