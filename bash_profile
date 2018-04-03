@@ -1,8 +1,15 @@
-# Load git completions
-git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
-test -s $git_completion_script && source $git_completion_script
+# git autocomplete branch names
+if [ -f ~/.git-completion.bash ]; then 
+  . ~/.git-completion.bash 
+fi
 
-# A more colorful prompt
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous on"
+
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
+
+# more colorful prompt
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
 #  \e[0;31m\ sets the color to red
@@ -44,6 +51,15 @@ alias ls='ls -Gh'
 export GREP_OPTIONS='--color=always'
 
 alias la='ls -Fah'
+alias be='bundle exec'
+alias bi='bundle install'
 
 # set my default editor to vim
 export EDITOR="vim"
+
+eval "$(rbenv init -)"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
