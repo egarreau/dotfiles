@@ -6,9 +6,6 @@ fi
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous on"
 
-export NVM_DIR="$HOME/.nvm"
-  . "/usr/local/opt/nvm/nvm.sh"
-
 # more colorful prompt
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
@@ -20,9 +17,9 @@ c_git_clean='\[\e[0;32m\]'
 c_git_dirty='\[\e[0;31m\]'
 
 # PS1 is the variable for the prompt you see everytime you hit enter
-PROMPT_COMMAND='PS1="${c_path}\W${c_reset}$(git_prompt) :> "'
+PROMPT_COMMAND='PS1="${c_path}\W${c_reset}$(git_prompt) ✨ "'
 
-export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]:> '
+export PS1='\n\[\033[0;31m\]\W\[\033[0m\]$(git_prompt)\[\033[0m\]✨'
 
 # determines if the git branch you are on is clean or dirty
 git_prompt ()
