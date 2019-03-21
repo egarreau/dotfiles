@@ -54,7 +54,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $ brew install the_silver_searcher
 ```
 
-*Launch vim and run `:PluginInstall` to install all plugins*
+**Launch vim and run `:PluginInstall` to install all plugins**
 
 ## Tmux
 
@@ -63,7 +63,7 @@ $ brew install tmux
 $ cp tmux.conf ~/.tmux.conf
 ```
 
-*Restart terminal*
+**Restart terminal**
 
 ### Other random stuff I like
 
